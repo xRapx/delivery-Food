@@ -1,15 +1,16 @@
 "use client";
+import { CartContext } from "@/components/AppContext";
+
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import { useContext, useState } from "react";
 import ShoppingCart from "../icons/ShopppingCart";
 import Bars2 from "../icons/Bars2";
-import { useSession } from "next-auth/react";
-import { Fragment, useContext, useState } from "react";
-import { CartContext } from "../AppContext";
 
 function AuthLinks({ status, userName }) {
   if (status === "authenticated") {
     return (
-      <Fragment>
+      <>
         <Link href={"/profile"} className="whitespace-nowrap">
           Hello, {userName}
         </Link>
@@ -19,12 +20,12 @@ function AuthLinks({ status, userName }) {
         >
           Logout
         </button>
-      </Fragment>
+      </>
     );
   }
   if (status === "unauthenticated") {
     return (
-      <Fragment>
+      <>
         <Link href={"/login"}>Login</Link>
         <Link
           href={"/register"}
@@ -32,34 +33,34 @@ function AuthLinks({ status, userName }) {
         >
           Register
         </Link>
-      </Fragment>
+      </>
     );
   }
 }
 
-function Header() {
+export default function Header() {
   const session = useSession();
+  console.log(session)
+
   const status = session?.status;
   const userData = session.data?.user;
   let userName = userData?.name || userData?.email;
-
   const { cartProducts } = useContext(CartContext);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
+  if (userName && userName.includes(" ")) {
+    userName = userName.split(" ")[0];
+  }
   return (
     <header>
       <div className="flex items-center md:hidden justify-between">
         <Link className="text-primary font-semibold text-2xl" href={"/"}>
-          Food Delivery
+          ST PIZZA
         </Link>
-        <div>
+        <div className="flex gap-8 items-center">
           <Link href={"/cart"} className="relative">
             <ShoppingCart />
             {cartProducts?.length > 0 && (
-              <span
-                className="absolute -top-2 -right-4 bg-primary text-white 
-									text-xs py-1 px-1 rounded-full leading-3"
-              >
+              <span className="absolute -top-2 -right-4 bg-primary text-white text-xs py-1 px-1 rounded-full leading-3">
                 {cartProducts.length}
               </span>
             )}
@@ -81,12 +82,13 @@ function Header() {
           <Link href={"/menu"}>Menu</Link>
           <Link href={"/#about"}>About</Link>
           <Link href={"/#contact"}>Contact</Link>
+          <AuthLinks status={status} userName={userName} />
         </div>
       )}
       <div className="hidden md:flex items-center justify-between">
         <nav className="flex items-center gap-8 text-gray-500 font-semibold">
           <Link className="text-primary font-semibold text-2xl" href={"/"}>
-            Food Delivery
+            ST PIZZA
           </Link>
           <Link href={"/"}>Home</Link>
           <Link href={"/menu"}>Menu</Link>
@@ -108,5 +110,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

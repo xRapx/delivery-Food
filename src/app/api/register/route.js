@@ -4,7 +4,9 @@ import bcrypt from "bcrypt";
 
 export async function POST(req) {
   const body = await req.json();
-  mongoose.connect(process.env.MONGODB_CONNECT_URL);
+  mongoose.connect(
+    "mongodb+srv://huynhminhquan2706:8dn4KAuLbd6CyTcQ@huynhminhquan.zdbqu9w.mongodb.net/foodDelivery"
+  );
   const pass = body.password;
   if (!pass?.length || pass.length < 5) {
     new Error("password must be at least 5 characters");
