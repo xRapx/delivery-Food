@@ -2,7 +2,7 @@ import uniqid from "uniqid";
 import multer from "multer";
 import path from "path";
 
-export const config = {
+export const apiConfig = {
   api: {
     bodyParser: false,
   },
