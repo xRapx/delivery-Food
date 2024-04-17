@@ -2,11 +2,11 @@ import uniqid from "uniqid";
 import multer from "multer";
 import path from "path";
 
-export const apiConfig = {
-  api: {
-    bodyParser: false,
-  },
-};
+// export const apiConfig = {
+//   api: {
+//     bodyParser: false,
+//   },
+// };
 
 const storage = multer.diskStorage({
   destination: "./public",
