@@ -5,10 +5,12 @@ import CartProduct from "../../components/menu/CartProduct";
 import { dataFood } from "@/components/db";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../components/AppContext";
+import AddressInputs from "../../components/layout/AddressInputs";
 
 export default function CartPage() {
   const { cartProducts, totals } = useContext(CartContext);
   const [total, setTotal] = useState("");
+  const [address, setAddress] = useState({});
 
   useEffect(() => {
     let price = 0;
@@ -27,6 +29,9 @@ export default function CartPage() {
       </section>
     );
   }
+
+  function proceedToCheckout() {}
+  function handleAddressChange() {}
 
   return (
     <section className="mt-8">
@@ -47,29 +52,32 @@ export default function CartPage() {
                 // onRemove={removeCartProduct}
               />
             ))}
+          <div className="py-2 pr-16 flex justify-end items-center">
+            <div className="text-gray-500">
+              Subtotal:
+              <br />
+              Delivery:
+              <br />
+              Total:
+            </div>
+            <div className="font-semibold pl-2 text-right">
+              ${total}
+              <br />
+              $5
+              <br />${total + 5}
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="py-2 pr-16 flex justify-end items-center">
-        <div className="text-gray-500">
-          Subtotal:
-          <br />
-          Delivery:
-          <br />
-          Total:
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <h2>Checkout</h2>
+          <form onSubmit={proceedToCheckout}>
+            <AddressInputs
+              addressProps={address}
+              setAddressProp={handleAddressChange}
+            />
+            <button type="submit">Pay ${total + 5}</button>
+          </form>
         </div>
-        <div className="font-semibold pl-2 text-right">
-          ${total}
-          <br />
-          $5
-          <br />${total + 5}
-        </div>
-      </div>
-      <div className="bg-gray-100 p-4 rounded-lg">
-        <h2>Checkout</h2>
-        <form>
-          <button type="submit">Pay ${total + 5}</button>
-        </form>
       </div>
     </section>
   );
