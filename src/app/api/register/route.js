@@ -1,9 +1,10 @@
 import { User } from "@/models/User";
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export async function POST(req) {
   const body = await req.json();
+  console.log(body);
   mongoose.connect(
     "mongodb+srv://huynhminhquan2706:8dn4KAuLbd6CyTcQ@huynhminhquan.zdbqu9w.mongodb.net/foodDelivery"
   );
@@ -16,7 +17,12 @@ export async function POST(req) {
   const salt = bcrypt.genSaltSync(10);
   body.password = bcrypt.hashSync(notHashedPassword, salt);
 
-  const createdUser = await User.create(body);
+  const createdUser = await User.create({
+    name: body.name,
+    email: body.email,
+    password: body.password,
+    image: body.image,
+  });
 
   return Response.json(createdUser);
 }

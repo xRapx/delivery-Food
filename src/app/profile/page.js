@@ -1,12 +1,7 @@
 "use client";
-// import EditableImage from "@/components/layout/EditableImage";
-// import InfoBox from "@/components/layout/InfoBox";
-// import SuccessBox from "@/components/layout/SuccessBox";
-// import UserForm from "@/components/layout/UserForm";
-// import UserTabs from "@/components/layout/UserTabs";
+import UserForm from "@/components/layout/UserForm";
+import UserTabs from "@/components/layout/UserTabs";
 import { useSession } from "next-auth/react";
-// import Image from "next/image";
-// import Link from "next/link";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -61,7 +56,10 @@ export default function ProfilePage() {
 
   return (
     <section className="mt-8">
-      <h1>Profile</h1>
+      <UserTabs isAdmin={isAdmin} />
+      <div className="max-w-2xl mx-auto mt-8">
+        <UserForm user={user} onSave={handleProfileInfoUpdate} />
+      </div>
     </section>
   );
 }

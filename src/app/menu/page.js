@@ -1,37 +1,32 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-
-import MenuItem from "@/components/menu/MenuItem";
+import { useProfile } from "@/components/UseProfile";
 import { useEffect, useState } from "react";
-
+import MenuItem from "@/components/menu/MenuItem";
 import SectionHeaders from "@/components/SectionHeaders";
-import { dataFood } from "@/components/db";
-console.log(dataFood);
 
-export default function MenuPage() {
-  const [categories, setCategories] = useState([]);
-  const [menuItems, setMenuItems] = useState([]);
+export default function Menu() {
+  const [menu, setMenu] = useState([]);
+  // const { loading, data } = useProfile();
+
   useEffect(() => {
-    setCategories(categories);
-    setMenuItems(dataFood);
+    fetch("/api/menu")
+      .then((res) => res.json())
+      .then((data) => setMenu(data));
   }, []);
+
   return (
-    <section className="mt-8">
-      {categories.length > 0 &&
-        categories.map((c) => (
-          <div key={c._id}>
-            <div className="text-center">
-              <SectionHeaders mainHeader={c.name} />
-            </div>
-            <div className="grid sm:grid-cols-3 gap-4 mt-6 mb-12">
-              {menuItems
-                .filter((item) => item.category === c._id)
-                .map((item) => (
-                  <MenuItem key={item._id} {...item} />
-                ))}
-            </div>
-          </div>
-        ))}
+    <section className="mt-8 max-w-2xl mx-auto">
+      <div className="text-center mb-4">
+        <SectionHeaders
+          subHeader={"Food Delivery"}
+          mainHeader={"Menu Orders"}
+        />
+        <div className="grid grid-cols-3 gap-2">
+          {menu.map((item, index) => (
+            <MenuItem key={index} {...item} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

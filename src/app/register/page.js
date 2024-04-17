@@ -6,6 +6,8 @@ import { useState } from "react";
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  // const [admin, setAdmin] = useState(false);
   const [creatingUser, setCreatingUser] = useState(false);
   const [userCreated, setUserCreated] = useState(false);
   const [error, setError] = useState(false);
@@ -17,7 +19,7 @@ export default function RegisterPage() {
     setUserCreated(false);
     const response = await fetch("/api/register", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password, name }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -51,6 +53,13 @@ export default function RegisterPage() {
         </div>
       )}
       <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          placeholder="username"
+          value={name}
+          disabled={creatingUser}
+          onChange={(ev) => setName(ev.target.value)}
+        />
         <input
           type="email"
           placeholder="email"

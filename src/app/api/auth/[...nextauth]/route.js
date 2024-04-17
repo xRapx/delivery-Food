@@ -1,6 +1,6 @@
 import clientPromise from "@/libs/mongoConnect";
 import { UserInfo } from "@/models/UserInfo";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs"
 import mongoose from "mongoose";
 import { User } from "@/models/User";
 import NextAuth, { getServerSession } from "next-auth";
@@ -26,7 +26,11 @@ export const authOptions = {
         const passwordOk = user && bcrypt.compareSync(password, user.password);
 
         if (passwordOk) {
-          return user;
+          return {
+            name: user.name,
+            email: user.email,
+            image: user.image,
+          };
         }
         return null;
       },
