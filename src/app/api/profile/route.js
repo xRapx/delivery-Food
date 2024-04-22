@@ -1,13 +1,11 @@
-import { authOptions } from "../../../libs/authOption";
+import { authOptions } from "@/libs/authOption";
 import { User } from "@/models/User";
 import { UserInfo } from "@/models/UserInfo";
 import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
 
 export async function PUT(req) {
-  mongoose.connect(
-    "mongodb+srv://huynhminhquan2706:8dn4KAuLbd6CyTcQ@huynhminhquan.zdbqu9w.mongodb.net/foodDelivery"
-  );
+  mongoose.connect(process.env.MONGODB_CONNECT_URL);
   const data = await req.json();
   const { _id, name, image, ...otherUserInfo } = data;
 

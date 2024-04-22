@@ -1,11 +1,11 @@
 "use client";
 import { CartContext } from "@/components/AppContext";
+import Bars2 from "@/components/icons/Bars2";
 
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useContext, useState } from "react";
 import ShoppingCart from "../icons/ShopppingCart";
-import Bars2 from "../icons/Bars2";
 
 function AuthLinks({ status, userName }) {
   if (status === "authenticated") {
@@ -40,7 +40,6 @@ function AuthLinks({ status, userName }) {
 
 export default function Header() {
   const session = useSession();
-
   const status = session?.status;
   const userData = session.data?.user;
   let userName = userData?.name || userData?.email;
@@ -53,7 +52,7 @@ export default function Header() {
     <header>
       <div className="flex items-center md:hidden justify-between">
         <Link className="text-primary font-semibold text-2xl" href={"/"}>
-          Food Delivery
+          FOOD DELIVERY
         </Link>
         <div className="flex gap-8 items-center">
           <Link href={"/cart"} className="relative">
@@ -87,7 +86,7 @@ export default function Header() {
       <div className="hidden md:flex items-center justify-between">
         <nav className="flex items-center gap-8 text-gray-500 font-semibold">
           <Link className="text-primary font-semibold text-2xl" href={"/"}>
-            Food Delivery
+            FOOD DELIVERY
           </Link>
           <Link href={"/"}>Home</Link>
           <Link href={"/menu"}>Menu</Link>

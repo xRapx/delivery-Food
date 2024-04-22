@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import AddToCartButton from "@/components/menu/AddToCartButton";
 
 export default function MenuItemTile({ onAddToCart, ...item }) {
-  const { image, des, name, basePrice, sizes, extraIngredientPrices } = item;
+  const { image, description, name, basePrice, sizes, extraIngredientPrices } =
+    item;
   const hasSizesOrExtras =
     sizes?.length > 0 || extraIngredientPrices?.length > 0;
   return (
@@ -17,14 +17,13 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
           alt="pizza"
         />
       </div>
-      <h4 className="font-semibold text-xl my-3">
-        {name} {basePrice}
-      </h4>
-      <p className="text-gray-500 text-sm line-clamp-3">{des} </p>
+      <h4 className="font-semibold text-xl my-3">{name}</h4>
+      <p className="text-gray-500 text-sm line-clamp-3">{description}</p>
       <AddToCartButton
         image={image}
         hasSizesOrExtras={hasSizesOrExtras}
         onClick={onAddToCart}
+        basePrice={basePrice}
       />
     </div>
   );

@@ -1,10 +1,24 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider, useSession } from "next-auth/react";
 import { createContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export const CartContext = createContext({});
+
+export function cartProductPrice(cartProduct) {
+  let price = cartProduct.basePrice;
+  if (cartProduct.size) {
+    price += cartProduct.size.price;
+  }
+  if (cartProduct.extras?.length > 0) {
+    for (const extra of cartProduct.extras) {
+      price += extra.price;
+    }
+  }
+  return price;
+}
 
 export function AppProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
@@ -17,8 +31,22 @@ export function AppProvider({ children }) {
     }
   }, []);
 
-  function clearCart() {}
-  function removeCartProduct() {}
+  function clearCart() {
+    setCartProducts([]);
+    saveCartProductsToLocalStorage([]);
+  }
+
+  function removeCartProduct(indexToRemove) {
+    setCartProducts((prevCartProducts) => {
+      const newCartProducts = prevCartProducts.filter(
+        (v, index) => index !== indexToRemove
+      );
+      saveCartProductsToLocalStorage(newCartProducts);
+      return newCartProducts;
+    });
+    toast.success("Product removed");
+  }
+
   function saveCartProductsToLocalStorage() {
     if (ls) {
       ls.setItem("cart", JSON.stringify(cartProducts));
@@ -29,11 +57,10 @@ export function AppProvider({ children }) {
     saveCartProductsToLocalStorage(cartProducts);
   }, [cartProducts]);
 
-  function addToCart(product) {
-    setCartProducts((prevProduct) => {
-      const cartProduct = { ...product };
-      const newProducts = [...prevProduct, cartProduct];
-
+  function addToCart(product, size = null, extras = []) {
+    setCartProducts((prevProducts) => {
+      const cartProduct = { ...product, size, extras };
+      const newProducts = [...prevProducts, cartProduct];
       saveCartProductsToLocalStorage(newProducts);
       return newProducts;
     });

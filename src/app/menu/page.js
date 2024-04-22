@@ -1,32 +1,38 @@
 "use client";
-import { useProfile } from "@/components/UseProfile";
-import { useEffect, useState } from "react";
+
 import MenuItem from "@/components/menu/MenuItem";
-import SectionHeaders from "@/components/SectionHeaders";
+import { useEffect, useState } from "react";
+import SectionHeaders from "../../components/SectionHeaders";
 
-export default function Menu() {
-  const [menu, setMenu] = useState([]);
-  // const { loading, data } = useProfile();
-
+export default function MenuPage() {
+  const [categories, setCategories] = useState([]);
+  const [menuItems, setMenuItems] = useState([]);
+  console.log(menuItems);
   useEffect(() => {
-    fetch("/api/menu")
-      .then((res) => res.json())
-      .then((data) => setMenu(data));
+    fetch("/api/categories").then((res) => {
+      res.json().then((categories) => setCategories(categories));
+    });
+    fetch("/api/menu-items").then((res) => {
+      res.json().then((menuItems) => setMenuItems(menuItems));
+    });
   }, []);
-
   return (
-    <section className="mt-8 max-w-2xl mx-auto">
-      <div className="text-center mb-4">
-        <SectionHeaders
-          subHeader={"Food Delivery"}
-          mainHeader={"Menu Orders"}
-        />
-        <div className="grid grid-cols-3 gap-2">
-          {menu.map((item, index) => (
-            <MenuItem key={index} {...item} />
-          ))}
-        </div>
-      </div>
+    <section className="mt-8">
+      {categories?.length > 0 &&
+        categories.map((c) => (
+          <div key={c._id}>
+            <div className="text-center">
+              <SectionHeaders mainHeader={c.name} className="uppercase" />
+            </div>
+            <div className="grid sm:grid-cols-3 gap-4 mt-6 mb-12">
+              {menuItems
+                .filter((item) => item.category.toString() === c._id.toString())
+                .map((item) => (
+                  <MenuItem key={item._id} {...item} />
+                ))}
+            </div>
+          </div>
+        ))}
     </section>
   );
 }

@@ -7,7 +7,7 @@ import Hero from "@/components/layout/Hero";
 
 export default function Home() {
   return (
-    <Fragment>
+    <>
       <Hero />
       <HomeMenu />
       <section className="text-center my-16" id="about">
@@ -41,6 +41,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-    </Fragment>
+    </>
   );
 }
