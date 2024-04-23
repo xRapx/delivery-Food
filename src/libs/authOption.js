@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
 import { User } from "@/models/User";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { getServerSession } from "next-auth";
 // import { MongoDBAdapter } from "@auth/mongodb-adapter";
 
 export const authOptions = {

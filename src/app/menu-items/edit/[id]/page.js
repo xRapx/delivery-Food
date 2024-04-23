@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import DeleteButton from "@/components/DeleteButton";
 import Left from "@/components/icons/Left";
@@ -16,7 +17,7 @@ export default function EditMenuItemPage() {
   const [menuItem, setMenuItem] = useState(null);
   const [redirectToItems, setRedirectToItems] = useState(false);
   const { loading, data } = useProfile();
-
+  //react-hooks/exhaustive-deps
   useEffect(() => {
     fetch("/api/menu-items").then((res) => {
       res.json().then((items) => {

@@ -12,6 +12,7 @@ export default function OrderPage() {
   const [order, setOrder] = useState();
   const [loadingOrder, setLoadingOrder] = useState(true);
   const { id } = useParams();
+  //react-hooks/exhaustive-deps
   useEffect(() => {
     if (typeof window.console !== "undefined") {
       if (window.location.href.includes("clear-cart=1")) {

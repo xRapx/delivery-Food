@@ -1,4 +1,5 @@
 import AddToCartButton from "@/components/menu/AddToCartButton";
+import Image from "next/image";
 
 export default function MenuItemTile({ onAddToCart, ...item }) {
   const { image, description, name, basePrice, sizes, extraIngredientPrices } =
@@ -11,7 +12,7 @@ export default function MenuItemTile({ onAddToCart, ...item }) {
       group hover:bg-white hover:shadow-md hover:shadow-black/25 transition-all"
     >
       <div className="text-center">
-        <img
+        <Image
           src={image}
           className="max-h-auto max-h-24 block mx-auto"
           alt="pizza"
