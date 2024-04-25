@@ -10,22 +10,22 @@ import ShoppingCart from "../icons/ShopppingCart";
 function AuthLinks({ status, userName }) {
   if (status === "authenticated") {
     return (
-      <div>
-        <Link href={"/profile"} className="whitespace-nowrap">
+      <>
+        <Link href={"/profile"} className="whitespace-nowrap mr-2">
           Hello, {userName}
         </Link>
         <button
           onClick={() => signOut()}
-          className="bg-primary rounded-full text-white px-10 py-2"
+          className="bg-primary rounded-full text-white px-8 py-2"
         >
           Logout
         </button>
-      </div>
+      </>
     );
   }
   if (status === "unauthenticated") {
     return (
-      <div>
+      <>
         <Link href={"/login"}>Login</Link>
         <Link
           href={"/register"}
@@ -33,7 +33,7 @@ function AuthLinks({ status, userName }) {
         >
           Register
         </Link>
-      </div>
+      </>
     );
   }
 }
