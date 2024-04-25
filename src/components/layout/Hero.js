@@ -28,7 +28,12 @@ export default function Hero() {
         </div>
       </div>
       <div className="relative hidden md:block">
-        <Image src={'/rice.jpg'} fill sizes="100vw" style={{objectFit:"cover"}}  alt={'rice'}  />
+        <Image 
+        src="/rice.jpg"
+        alt="rice"
+        width={500} // Desired width
+        height={300} // Desired height
+        objectFit="cover" />
       </div>
     </section>
   );
