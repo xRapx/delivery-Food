@@ -1,4 +1,5 @@
 import { Roboto } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import { AppProvider } from "@/components/AppContext";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           </AppProvider>
         </main>
       </body>
+      <GoogleAnalytics gaId="G-0J4WZ56WYW" />
     </html>
   );
 }

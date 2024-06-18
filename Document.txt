@@ -1,0 +1,8 @@
+// 1 số bổ sung tính năng còn thiếu cho ứng dụng cần hoàn thiện: 
+
+- 1. Tính năng uploadthing for NextJs
+- 2. Tính năng checkout 
+- 3. Chuyển đổi lưu trữ trong localstorage sang mongoDB
+- 4. UI giữa Admin / Guest 
+- 5. UI màu sắc , background
+- 6. Tính năng đăng nhập FB, GG, ....
