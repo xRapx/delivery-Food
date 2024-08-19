@@ -1,340 +1,375 @@
 [
-	{
-	  "name": "Rice",
-	  "image": "/rice.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+  {
+    "name": "Rice",
+    "image": "/rice.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03097",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Combo Chicken 1",
-	  "image": "/chickenRice.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03097",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Combo Chicken 1",
+    "image": "/chickenRice.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03097",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Combo Chicken 2",
-	  "image": "/chickenRice1.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03097",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Combo Chicken 2",
+    "image": "/chickenRice1.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03097",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Fish Rice",
-	  "image": "/fishRice.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03097",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Fish Rice",
+    "image": "/fishRice.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03097",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03097",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
 
-
-	{
-	  "name": "Tomato",
-	  "image": "/tomato1.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+  {
+    "name": "Tomato",
+    "image": "/tomato1.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03098",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Meal & Tomato",
-	  "image": "/mealTomato.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03098",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Meal & Tomato",
+    "image": "/mealTomato.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03098",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Pizza & Tomato",
-	  "image": "/pizzaTomato.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03098",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Pizza & Tomato",
+    "image": "/pizzaTomato.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03098",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Rice & Tomato",
-	  "image": "/riceTomato.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03098",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Rice & Tomato",
+    "image": "/riceTomato.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03098",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Steak & Tomato",
-	  "image": "/steaktomato.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03098",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Steak & Tomato",
+    "image": "/steaktomato.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03098",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Banana",
-	  "image": "/banana1.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03098",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Banana",
+    "image": "/banana1.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03099",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Banana & Rice",
-	  "image": "/bananaRice.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03099",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Banana & Rice",
+    "image": "/bananaRice.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03099",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	},
-	{
-	  "name": "Banana & Salad",
-	  "image": "/bananSalad.jpg",
-	  "description": "Vietnamese Food is better and yummy",
-	  "basePrice": "20",
-	  "sizes":[{
-		"name": "Small",
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03099",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  },
+  {
+    "name": "Banana & Salad",
+    "image": "/bananSalad.jpg",
+    "description": "Vietnamese Food is better and yummy",
+    "basePrice": "20",
+    "sizes": [
+      {
+        "name": "Small",
         "price": "20"
-	  },{
-		"name":"Big",
-		"price":"30"
-	  },{
-		"name":"Long Size",
-        "price":"40"
-	  }
-	],
-	  "category": "66263e1d27e5289b42d03099",
-	  "extraIngredientPrices": [
-		{
-			"name": "incre",
-            "price": "6"
-		},
-		{
-			"name": "decre",
-            "price": "0"
-		}
-	  ]
-	}
+      },
+      {
+        "name": "Big",
+        "price": "30"
+      },
+      {
+        "name": "Long Size",
+        "price": "40"
+      }
+    ],
+    "category": "66263e1d27e5289b42d03099",
+    "extraIngredientPrices": [
+      {
+        "name": "incre",
+        "price": "6"
+      },
+      {
+        "name": "decre",
+        "price": "0"
+      }
+    ]
+  }
 ]

@@ -7,16 +7,25 @@ import SectionHeaders from "../../components/SectionHeaders";
 export default function MenuPage() {
   const [categories, setCategories] = useState([]);
   const [menuItems, setMenuItems] = useState([]);
+  const [loading, setLoading] = useState(false)
+  
   useEffect(() => {
+    setLoading(true)
     fetch("/api/categories").then((res) => {
       res.json().then((categories) => setCategories(categories));
+      setLoading(false)
     });
     fetch("/api/menu-items").then((res) => {
       res.json().then((menuItems) => setMenuItems(menuItems));
+      setLoading(false)
     });
   }, []);
+
   return (
     <div className="mt-8">
+      {
+        loading && (<div>Loading....</div>) 
+      }
       {categories?.length > 0 &&
         categories.map((c) => (
           <div key={c._id}>
